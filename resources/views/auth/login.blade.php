@@ -8,8 +8,6 @@
 
 <body id="login">
   
-    <i><a href="/resend-verify" class='white link'>Click To Resend Verification Email</a></i>
-
   <div class="login-logo">
     <a href="/"> <img src="{{asset('images/dstreet_logo_signin_up.png') }}" class="logo-size" 
                         title="welcome to dstreet" alt="dstreet logo buy and sell in nigeria"/></a>
@@ -52,17 +50,7 @@
 
         <div class="text-center">
 
-            <?php
-            $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
-if(stripos($ua,'version/') !== false || stripos($ua,'wv') !== false) { 
-echo '';
-}else{
-
-echo "<a href='http://www.dstreet.com.ng/login/google' class='btn white google'>
-            <span class='fa fa-google'></span> Login with Google
-          </a>";
-}
-            ?>
+            
 
         
 
@@ -74,7 +62,6 @@ echo "<a href='http://www.dstreet.com.ng/login/google' class='btn white google'>
 		<ul class="new  margin-up">
 			<li class="new_left "><p><a href="{{ route('password.request') }}" class='white link'>Forgot Password ?</a></p></li>
 			<li class="new_right"><p class="sign white">New here ?<a href="/register" class='white link'> Sign Up</a></p></li>
-      <li class="new_left"><p ><a href="/resend-verify" class='white link'>No Verification Email yet? Click To Resend</a></p></li>
       <div class="clearfix"></div>
         </ul>
 

@@ -5,59 +5,7 @@
 
         <hr >   
             <div class="container">
-                <div class="wthree-foo-grids">
-                    <div class="col-md-3 wthree-footer-grid">
-                        <h4 class="footer-head">Who We Are</h4>
-                        <p>DStreet is an online platform strategically targeted at all students in Nigerian Universities to buy, sell or swap items. 
-                        Place a post/advertise on Dstreet! It is absolutely easy, <a href='/how-to-buy-sell' class='link'>all you need to do is</a> take a picture of what you’re selling, upload it.
-                        </p>
-                     </div>
-                    <div class="col-md-3 wthree-footer-grid">
-                        <h4 class="footer-head">Help</h4>
-                        <ul>
-                            <li><a href="{{route('howto')}}" class='link'><i class="fa fa-long-arrow-right" aria-hidden="true"></i>How it Works</a></li>
-                            <li><a href="/help" class='link'><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Faq</a></li>
-                            <li><a href="/report" class='link'><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Reviews</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="col-md-3 wthree-footer-grid">
-                        <h4 class="footer-head">Information</h4>
-                        <ul>
-                            <li><a href="/terms" class='link'><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Terms of Use</a></li>
-                            <li><a href="/privacy" class='link'><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 wthree-footer-grid">
-                        <h4 class="footer-head">Contact Us</h4>
-                        <address>
-							
-								<div class="clearfix"> </div>
-								<ul class="location">
-									<li><span class="fa fa-phone"></span></li>
-									<li> <a href="tel:+2348035562231" class='link text-capitalize'>Click to call</a></li>
-								</ul>	
-								<div class="clearfix"> </div>
-								<ul class="location">
-									<li><span class="fa fa-envelope"></span></li>
-									<li><a href="mailto:support@dstreet.com.ng" class='link'>support@dstreet.com.ng</a></li>
-                                </ul>	
-                                <ul class="location">
-                                        <li><span class="fa fa-facebook"></span></li>
-                                        <li ><a href='https://fb.me/Dstreet.LIVE' class='link text-capitalize' target='_blank'>Facebook</a></li>
-                                    </ul>	
-                                    <ul class="location">
-                                            <li><span class="fa fa-twitter"></span></li>
-                                            <li><a href='https://twitter.com/DstreetNg' class='link text-capitalize' target='_blank'>Twitter</a></li>
-                                        </ul>	
-                                        <ul class="location">
-                                                <li><span class="fa fa-instagram"></span></li>
-                                                <li ><a href='https://www.instagram.com/_dstreetlive' class='link text-capitalize' target='_blank'>Instagram</a></li>
-                                            </ul>					
-							</address>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
+               
             </div>
         </div>
         <div class="agileits-footer-bottom text-center">

@@ -28,9 +28,7 @@
             <script src="{{ asset('visitor_js/notifier.js') }}"></script>
 
           
-            <!--share btn-->
-            <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b08750ccbc3900011ee2abc&product=inline-share-buttons"></script>
-    
+        
           <!-- loader for a tags on web view-->
 <?php
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -64,17 +62,6 @@ echo '';
 }
 ?>
 
-            
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120000273-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-120000273-1');
-</script>
 
 
 
@@ -1009,21 +996,6 @@ $('.flexslider').flexslider({
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 ?>
 
-@if(stripos($ua,'version/') !== false || stripos($ua,'wv') !== false) 
-<!--And webview-->
-@else
-<script>
-        //notifier for app download
-        $(window).load(function(){
-             $.notifier({
-                 "message":" <a href='/dstreet-for-android'><i class='fa fa-android'></i> Click to Download Dstreet for Android</a>",
-                 "color1":"white", //background color of the notification bar
-                 "color2":"black", //color of the text
-                 "delay":3   //Show the notification from in 3 seconds
-             });
-         });
-            </script>
-            @endif
 
 <script>
 

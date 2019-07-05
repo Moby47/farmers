@@ -41,9 +41,9 @@ trait RegistersUsers
         $host = 'www.google.com';
         $port ='80';
 
-$st = (bool)@fsockopen($host, $port, $err_no, $err_str, 10);
+//$st = (bool)@fsockopen($host, $port, $err_no, $err_str, 10);
 
-if($st){
+//if($st){
     //if $st then ,its online
     //check if user already reged before
     $try = $request->input('email');
@@ -61,17 +61,13 @@ if($st){
     event(new Registered($user = $this->create($request->all())));
     }
    
-}else{
-    //if !$st then ,its offline
-    //redirect with netwk message
-    return redirect('/register')->with('network','Please Check Your Network Connection');
-}
+
 
 
        // $this->guard()->login($user);
        //user is redirected here after registeration
 
-       return redirect('/login')->with('success','We Sent a Link to Your Email to Activate Your Account...');
+      // return redirect('/login')->with('success','We Sent a Link to Your Email to Activate Your Account...');
 
         return $this->registered($request, $user)
                         ?: redirect($this->redirectPath());

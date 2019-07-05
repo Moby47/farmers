@@ -103,7 +103,6 @@ class visitorcontroller extends Controller
           $id = posts::where('title','=',$decoded)->pluck('id')->first();
         }
 
-       
         $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 
  $post =  posts::findorfail($id);
@@ -116,7 +115,7 @@ $locator= $post->user_id;
  $name = User::findorfail($locator);
  $seller = $name ->name;
  //get seller details
-
+        
   //get seller other posts //more records to be loaded to the page
   $userid =$name->id;
   $school = $post->school;

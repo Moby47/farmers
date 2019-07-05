@@ -35,25 +35,6 @@ trait AuthenticatesUsers
    $check = User::where('email','=',$try)->first();
    
    if($check){
-    $veri = $check->verification;
-    $mail = $check->email;
-
-     //redirect if mail exists, meaning verification mail has been sent
-     if($veri == 0){
-        //redirect with verification mail sent message
-     return redirect('/login')
-     ->with('exists','Verification Email Already Sent to '.$mail.' Once');
-
-   }else{
-    
-//check state to determine activation
- $deter =  $check->state;
- if($deter == 0){
-    return redirect('/buy-sell-product')
-     ->with('deact','Account Deactivated, Contact Us to Get Back on Dstreet.'); 
- }
-//check state to determine activation
-
     //continue laravel code
       // If the class is using the ThrottlesLogins trait, we can automatically throttle
             // the login attempts for this application. We'll key this by the username and
@@ -75,7 +56,7 @@ trait AuthenticatesUsers
     
             return $this->sendFailedLoginResponse($request);
             
-      }//end of checking if reged bt not verified
+  
       
 
    }else{ //end of check continue laravel code

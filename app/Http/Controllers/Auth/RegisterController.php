@@ -97,7 +97,7 @@ class RegisterController extends Controller
             'number' => $data['number'],
              'school' => $data['school'],
              'verifytoken' => Str::random(40),
-            
+            'verification'=> 0,
         ]);
        }
        catch(\Exception $e){

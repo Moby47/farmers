@@ -14,14 +14,12 @@
         <div class="w3ls-header-right">
             <ul>
                 <li class="dropdown head-dpdn">   
-  <a href="/final-year-projects" class=''><i class="fa fa-book" aria-hidden="true"></i> Projects </a>         
+  <a href="/how-to-buy-sell" class=''><i class="fa fa-blind" aria-hidden="true"></i> How to run DStreet </a>         
                 </li>
                  <li class="dropdown head-dpdn">         
-    <a href="{{route("reqqq")}}" class=''><i class="fa fa-info" aria-hidden="true"></i> Requests </a>     
+    <a href="/items-to-buy-around-campus" class=''><i class="fa fa-cab" aria-hidden="true"></i> Explore</a>     
                 </li>
-      <li class="dropdown head-dpdn">   
-            <a href="https://blog.dstreet.com.ng" class=''><i class="fa fa-comments" aria-hidden="true"></i> Blog </a>         
-     </li>   
+       
      
      @guest
      <li class="dropdown head-dpdn"> 

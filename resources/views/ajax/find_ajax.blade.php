@@ -1,66 +1,12 @@
 	<!--parent-->
 	<div class="ads-grid">
 
-			<!--ads-->
-				<div class="side-bar col-md-3">
-					
-				<div class="w3ls-featured-ads">
-					<h2 class="sear-head fer">Premium Ads</h2>
-					<div class="w3l-featured-ad">
-
-							@if(count($advert)>0)
-
-							@foreach($advert as $ad)
-						<!--loop-->
-					<a href="/buy-ad/{{$ad->id}}">
-							<div class="w3-featured-ad-left">
-								<img src="/storage/ads_images/{{$ad->banner}}" alt="{{$ad->banner}}" 
-								title="{{$ad->title}}" class='img-responsive ad-size'>
-							</div>
-							<div class="w3-featured-ad-right">
-								<h4 class='wrap'>{{substr($ad->title,0,11)}}..</h4></a>
-					<p><a class='btn aqua white custom-btn' href='tel:{{$ad->phone}}'>Call</a></p>
-					@if($ad->link)
-							<p><a class='btn aqua white custom-btn' href='http://{{$ad->link}}' target='_blank'>Our Website</a></p>
-						@else
-						<p>No Website</p>
-						@endif
-					</div>
-							<div class="clearfix"></div>
-						
-						<hr>
-						<!--loop-->
-						@endforeach
-					
-					@else
-					
-						 <div class="alert alert-info">
-                               <h5 class="text-center">
-						@if(Auth::check())
-						No Advert For Your School Currently,
-							@if ( Auth()->user()->status == 1)
-							
-							@else
-							<a href="/ads"><span class='text-danger'>Click To Add </span></a></h5>
-							@endif
-							
-						@else
-						<a href="/goto-ad">No Advert Currently, <span class='text-danger'>Click To Add </span></a></h5>
-						@endif
-						 </div>
-					@endif
-					</div>
-					
-					
-					<div class="clearfix"></div>
-				</div>
-				</div>
-				<!--ads-->
+		
 
 
 
 				<!--post-->
-				<div class="agileinfo-ads-display col-md-9">
+				<div class="agileinfo-ads-display col-md-12">
 					<div class="wrapper">					
 					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					  <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
@@ -100,26 +46,7 @@
 									<span class="adprice"><strike>N</strike>{{number_format($pp->price)}}</span>
 									<p class="catpath">{{$pp->category}}</p>
 								</a>
-									@guest
-							<a href="/message-user/{{$pp->id}}" class="btn blue white up">Chat</a>
-									@else
-			
-									@if(Auth::user()->id != $pp->user_id)
-			
-									@if(Auth::check())
-									@if ( Auth::user()->status == 1)
-			
-									@else
-									<button class='btn aqua white message_main up'  data-useridx="{{$pp->user_id}}" data-titlex="{{$pp->title}}" data-myidx="{{Auth()->user()->id}}" data-namex="{{Auth()->user()->name}}" >Message</button>
-									@endif
-									@endif
-									
-									@else
-									<label class="label label-primary up">Posted by you</label>
-									@endif
-									
-									
-									@endguest
+								
 									
 												<button class="btn btn-info display blue up" data-num="{{$pp->number}}">Call </button>
 								

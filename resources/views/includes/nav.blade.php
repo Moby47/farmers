@@ -1,4 +1,4 @@
-<!-- Navigation -->
+<!-- Navigation
 <div class="agiletopbar">
         <div class="wthreenavigation">
             <div class="menu-wrap">
@@ -57,9 +57,9 @@ $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 ?>
 
 @if(stripos($ua,'version/') !== false || stripos($ua,'wv') !== false) 
-<!--And webview- do nothing-->
+--And webview- do nothing
 @else
-    <!-- dd mobile app-->
+     dd mobile app
     <a href="/dstreet-for-android"><i class="fa fa-fw fa-android"></i><span> DStreet for android</span> </a>
 @endif
 
@@ -91,4 +91,4 @@ $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
         </div>
         <div class="clearfix"></div>
     </div>
-    <!-- //Navigation -->
+   //Navigation -->

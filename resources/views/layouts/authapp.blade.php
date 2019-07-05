@@ -150,17 +150,8 @@ if($('.numval').val().length > 11){
 
     <script>
      
-$(function(){
 
-    $("#checkbox1").change(function(){
-        if(this.checked){
-             $(".reg").show('fade');
-        }else{
-             $(".reg").hide('fade');
-        }
-    });
-});
-
+/*
 setInterval(function(){
     var online = navigator.onLine;
     if(online){
@@ -175,30 +166,9 @@ setInterval(function(){
   
 },1000)
 
-
+*/
     </script>
 
-@if (Request::is('register'))
 
-<?php
-                      $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
-if(stripos($ua,'version/') !== false || stripos($ua,'wv') !== false) { 
-   
-echo '';
-}else{
-  echo '
-  
-  <script>
-$(document).ready(function(){
- toastr.info(\'<a href=\"http://www.dstreet.com.ng/login/google\" class=\"btn white google\">  <span class=\"fa fa-google\"></span> Register with Google </a>\');
-});
-        </script>
-  
-  ';
-}
-                      ?>
-
- 
-        @endif
 </html>
 

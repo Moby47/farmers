@@ -97,21 +97,7 @@ echo '';
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 ?>
 
-@if(stripos($ua,'version/') !== false || stripos($ua,'wv') !== false) 
-<!--And webview-->
-@else
-<script>
-        //notifier for app download
-        $(window).load(function(){
-             $.notifier({
-                 "message":" <a href='/dstreet-for-android'><i class='fa fa-android'></i> Click to Download Dstreet for Android</a>",
-                 "color1":"white", //background color of the notification bar
-                 "color2":"black", //color of the text
-                 "delay":3   //Show the notification from in 3 seconds
-             });
-         });
-            </script>
-            @endif
+
 
 <!--login notification-->
 <script>
@@ -540,21 +526,7 @@ $('.we_got_you').show('fade');
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 ?>
 
-@if(stripos($ua,'version/') !== false || stripos($ua,'wv') !== false) 
-<!--And webview-->
-@else
-<script>
-        //notifier for app download
-        $(window).load(function(){
-             $.notifier({
-                 "message":" <a href='/dstreet-for-android'><i class='fa fa-android'></i> Click to Download Dstreet for Android</a>",
-                 "color1":"white", //background color of the notification bar
-                 "color2":"black", //color of the text
-                 "delay":3   //Show the notification from in 3 seconds
-             });
-         });
-            </script>
-            @endif
+
 <script>
 //category select attitude when swap is chosen
 $('.postcategory').change(function(){

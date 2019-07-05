@@ -86,7 +86,7 @@
 
 							<div class="clearfix"></div>
 						</div>
-						<div class="condition">
+						<!--<div class="condition">
 							<p class="p-price">Condition</p>
 							<h5>
 								<?php
@@ -101,6 +101,7 @@
 							</h5>
 							<div class="clearfix"></div>
 						</div>
+					-->
 						<div class="itemtype">
 							<p class="p-price">Item Type</p>
 							<h5>{{$post->category}}</h5>
@@ -117,11 +118,7 @@
 								<div class="clearfix"></div>
 							</div>
 						@guest
-						<div class="itemtype">
-							<p class="p-price"><a href="/message-user/{{$post->id}}">Login to Unlock This Feature</a></p>
-							<h4><button class="btn btn-danger white" disabled><span class="fa fa-star"></span></button></h4>
-							<div class="clearfix"></div>
-						</div>
+						
 						@else
 						
 						@if( Auth::user()->id !=  $post->user_id)
@@ -130,30 +127,13 @@
 						@if ( Auth::user()->status == 1)
 
 						@else
-						<div class="itemtype remove">
-							<p class="p-price">Add to Favourites</p>
-							<form method="" action="">
-								<input type="hidden" value="{{$post->id}}" name="id" class='i'/>
-								<input type="hidden" value="{{$post->title}}" name="title" class='t'/>
-								<input type="hidden" value="{{$post->image_1}}" name="img1" class='i1'/>
-								
-							<h4><button class="btn aqua white fav_butt" type="submit"><span class="fa fa-star"></span></button></h4>
-						{{csrf_field()}}
-						</form>
-							<div class="clearfix"></div>
-						</div>
+						
 						@endif
 						@endif
 
 						@else
 						
-						<div class="itemtype remove">
-							<p class="p-price">Add to Favourites</p>
-						<label class="label aqua">Posted By You</label>
-							<div class="clearfix"></div>
-						</div>
 						
-
 						@endif
 
 						@endguest
@@ -162,44 +142,23 @@
 
 						@if( Auth()->user()->id == $post->user_id)
 
-						<div class="itemtype remove">
-								<p class="p-price">Report Post</p>
-							<label class="label aqua">Posted By You</label>
-								<div class="clearfix"></div>
-							</div>
+					
 
 						@else
 
 						@if( Auth()->user()->status == 1 )
 
 						@else
-						<div class="itemtype">
-								<p class="p-price">Report Post</p>
-								<h4><button class="btn btn-danger repmodal" data-id='{{$post->id}}' data-title='{{$post->title}}'>
-									<span class='fa fa-bug'></span></button></h4>
-								<div class="clearfix"></div>
-							</div>
+						
 							@endif
 						@endif
 
 						@else
 
-						<div class="itemtype">
-								<p class="p-price"><a href="/message-user/{{$post->id}}">Login to Unlock This Feature</a></p>
-								<h4><button class="btn btn-danger repmodal" disabled>
-									<span class='fa fa-bug'></span></button></h4>
-								<div class="clearfix"></div>
-							</div>
-
+						
 							@endif
 						
-							<div class="itemtype">
-								<b>	<p class="">Share Item</p> </b><br>
-									
-								<div class="sharethis-inline-share-buttons"></div>
-									
-									<div class="clearfix"></div>
-								</div>
+							
 							
 
 					</div>
@@ -214,7 +173,7 @@
 						<br>
 						@if($locator == 5000)
 						@else
-						<a href="/message-user/{{$post->id}}" class="btn btn-success">Chat</a>
+					
 						@endif
 						<a href="sms:+234{{substr($post->number,1,11)}}?body=Hello" class="btn btn-success">SMS</a>
 
@@ -307,7 +266,7 @@
 									 Explore
 								 </a>
 								 <p class='white'> {{substr($per->school,0,17)}}.. 
-									 |  {{$per->created_at->diffforhumans()}}</p>
+									 </p>
                                
                         <!--txt-->    </div>
                             <div class="clearfix"> </div>
@@ -340,7 +299,7 @@
 										 Explore
 									 </a>
 									 <p class='white'> {{substr($r->school,0,17)}}.. 
-										 |  {{$r->created_at->diffforhumans()}}</p>
+										 </p>
 								   
 							<!--txt-->    </div>
 					   <div class="clearfix"> </div>
